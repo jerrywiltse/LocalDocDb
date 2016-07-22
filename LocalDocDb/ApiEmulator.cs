@@ -36,7 +36,7 @@ namespace LocalDocDbClient
         }
         public void CreateAccountDir()
         {
-            Directory.CreateDirectory(AccountFullPath.FullName);
+            Directory.CreateDirectory(Path.Combine(AccountFullPath.FullName,"dbs"));
         }
         public void ReycleAccountDir()
         {

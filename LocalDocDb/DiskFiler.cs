@@ -32,7 +32,7 @@ namespace LocalDocDbClient
         {
             switch (action.Type)
             {
-                case FileActionType.List:
+                case FileActionType.Get:
                     return TryListFiles(action);
                 case FileActionType.Query:
                     return TryQueryFiles(action);

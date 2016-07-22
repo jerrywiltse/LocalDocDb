@@ -12,7 +12,6 @@ namespace LocalDocDbClient
         Get,
         Delete,
         Replace,
-        List,
         Query
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LocalDocDbClient.Tests
 {
-    class DocDBTest
+    class DocDbBaseTest
     {
     }
 }

@@ -1,5 +1,8 @@
 ﻿{
-  "frameworks": {        
+  "runtimes": {
+    "win": { }
+  },
+  "frameworks": {
     "net452": { }
   },
   "dependencies": {

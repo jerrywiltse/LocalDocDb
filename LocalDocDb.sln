@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDocDb.Tests", "LocalDo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDocDbClient", "LocalDocDbClient\LocalDocDbClient.csproj", "{3CB4B6C4-5524-4283-A9FA-2FEC5AADC16F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalDocDbClient.Tests", "LocalDocDbClient.Tests\LocalDocDbClient.Tests.csproj", "{5B2F8295-343A-4339-B13B-EA971F8BB4DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3CB4B6C4-5524-4283-A9FA-2FEC5AADC16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CB4B6C4-5524-4283-A9FA-2FEC5AADC16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CB4B6C4-5524-4283-A9FA-2FEC5AADC16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B2F8295-343A-4339-B13B-EA971F8BB4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B2F8295-343A-4339-B13B-EA971F8BB4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B2F8295-343A-4339-B13B-EA971F8BB4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B2F8295-343A-4339-B13B-EA971F8BB4DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
