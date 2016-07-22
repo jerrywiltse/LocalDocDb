@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocalDocDb
+namespace LocalDocDbClient
 {
-    class DocDbTrigger : DocDbBase
+    class DocDbSproc : DocDbBase
     {
-        public DocDbTrigger(string id) : base(GetBasePath(id))
+        public DocDbSproc(string id) 
         {
         }
     }

@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocalDocDb
+namespace LocalDocDbClient
 {
     class DocDbAccount : DocDbBase
     {
-        public DocDbAccount(string id, DirectoryInfo path) : base(GetAccountPath(id, path))
+        public DocDbAccount(string id, DirectoryInfo path)
         {
         }
         protected static DirectoryInfo GetAccountPath(string name, DirectoryInfo path)

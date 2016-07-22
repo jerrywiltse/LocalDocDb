@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocalDocDb
+namespace LocalDocDbClient
 {
     class DocDbCollection : DocDbBase
     {
-        public DocDbCollection(string id) : base(GetBasePath(id))
+        public DocDbCollection(string id)
         {
         }
         //public IEnumerable<string> ListDocuments()

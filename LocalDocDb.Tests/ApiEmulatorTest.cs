@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Xunit.Abstractions;
 
-namespace LocalDocDb.Tests
+namespace LocalDocDbClient.Tests
 {
     public class ApiEmulatorTest
     {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.FileIO;
 
-namespace LocalDocDb
+namespace LocalDocDbClient
 {
     public class ApiEmulator
     {
@@ -50,13 +50,13 @@ namespace LocalDocDb
             switch (operation)
             {
                 case HttpOperation.GET:
-                    return new DocDbBase(AccountFullPath).GetChildren(resourcePath, resourceType);
+                    return new DocDB(AccountFullPath).GetChildren(resourcePath, resourceType);
                 case HttpOperation.POST:
                     switch (resourceType)
                     {
                         case "offers":
                         case "docs":
-                            return new DocDbBase(AccountFullPath).QueryChildren(resourcePath, resourceType);
+                            return new DocDB(AccountFullPath).QueryChildren(resourcePath, resourceType);
                         default:
                             return new Response { Code = 489, Message = "Invalid Resource" };
                     }
@@ -84,7 +84,7 @@ namespace LocalDocDb
                         case "sprocs":
                         case "udfs":
                         case "triggers":
-                            return new DocDbBase(AccountFullPath).GetChild(resourcePath, resourceType, targetId);
+                            return new DocDB(AccountFullPath).GetChild(resourcePath, resourceType, targetId);
                         default:
                             return new Response { Code = 499, Message = "Invalid Operation" };
                     }
@@ -101,7 +101,7 @@ namespace LocalDocDb
                         case "sprocs":
                         case "udfs":
                         case "triggers":
-                            return new DocDbBase(AccountFullPath).CreateChild(resourcePath, resourceType, targetId, content, false);
+                            return new DocDB(AccountFullPath).CreateChild(resourcePath, resourceType, targetId, content, false);
                         default:
                             return new Response { Code = 499, Message = "Invalid Operation" };
                     }
@@ -117,7 +117,7 @@ namespace LocalDocDb
                         case "sprocs":
                         case "udfs":
                         case "triggers":
-                            return new DocDbBase(AccountFullPath).CreateChild(resourcePath, resourceType, targetId, content, true);
+                            return new DocDB(AccountFullPath).CreateChild(resourcePath, resourceType, targetId, content, true);
                         default:
                             return new Response { Code = 499, Message = "Invalid Operation" };
                     }
@@ -134,7 +134,7 @@ namespace LocalDocDb
                         case "sprocs":
                         case "udfs":
                         case "triggers":
-                            return new DocDbBase(AccountFullPath).DeleteChild(resourcePath, resourceType, targetId);
+                            return new DocDB(AccountFullPath).DeleteChild(resourcePath, resourceType, targetId);
                         default:
                             return new Response { Code = 499, Message = "Invalid Operation" };
                     }

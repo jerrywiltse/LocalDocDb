@@ -76,25 +76,13 @@
     <Compile Include="FileActionType.cs" />
     <Compile Include="ApiEmulator.cs" />
     <Compile Include="DiskFiler.cs" />
-    <Compile Include="DocDbAccount.cs" />
-    <Compile Include="DocDbAttachment.cs" />
-    <Compile Include="DocDbBase.cs" />
-    <Compile Include="DocDbCollection.cs" />
-    <Compile Include="DocDbDatabase.cs" />
-    <Compile Include="DocDbDocument.cs" />
-    <Compile Include="DocDbFunction.cs" />
-    <Compile Include="DocDbPermission.cs" />
-    <Compile Include="DocDbSproc.cs" />
-    <Compile Include="DocDbTrigger.cs" />
-    <Compile Include="DocDbUser.cs" />
-    <Compile Include="DocumentsBuilder.cs" />
+    <Compile Include="DocDB.cs" />
     <Compile Include="FilesAction.cs" />
     <Compile Include="FileAction.cs" />
     <Compile Include="HttpOperation.cs" />
     <Compile Include="MetaGen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response.cs" />
-    <Compile Include="StoreFile.cs" />
     <Compile Include="Resource.cs" />
     <Compile Include="JsonParser.cs" />
   </ItemGroup>

@@ -8,14 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocalDocDb
+namespace LocalDocDbClient
 {
-    class DocDbBase
+    class DocDB
     {
         protected string id { get; }
         protected string contentType { get; } = "JSON";
         protected DirectoryInfo DocDbRoot { get; }
-        public DocDbBase(DirectoryInfo root)
+        public DocDB(DirectoryInfo root)
         {
             this.DocDbRoot = root;
         }

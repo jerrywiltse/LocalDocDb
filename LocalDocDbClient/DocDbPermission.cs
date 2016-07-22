@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocalDocDb
+namespace LocalDocDbClient
 {
-    class DocDbFunction : DocDbBase
+    class DocDbPermission : DocDbBase
     {
-        public DocDbFunction(string id) : base(GetBasePath(id))
+        public DocDbPermission(string id)
         {
         }
     }

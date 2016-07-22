@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocalDocDb
+namespace LocalDocDbClient
 {
     class DocDbDocument : DocDbBase
     {
-        public DocDbDocument(string id) : base(GetBasePath(id))
+        public DocDbDocument(string id) 
         {
         }
         //public IEnumerable<string> ListAttachments()

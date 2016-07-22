@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace LocalDocDbClient
 {
-    public enum FileActionType
+    class DocDbTrigger : DocDbBase
     {
-        Create,
-        Get,
-        Delete,
-        Replace,
-        List,
-        Query
+        public DocDbTrigger(string id)
+        {
+        }
     }
 }
