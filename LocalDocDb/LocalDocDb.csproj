@@ -96,7 +96,6 @@
     <Compile Include="Response.cs" />
     <Compile Include="StoreFile.cs" />
     <Compile Include="Resource.cs" />
-    <Compile Include="Util.cs" />
     <Compile Include="JsonParser.cs" />
   </ItemGroup>
   <ItemGroup>
