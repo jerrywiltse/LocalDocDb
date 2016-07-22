@@ -1,0 +1,10 @@
+﻿{
+  "frameworks": {        
+    "net452": { }
+  },
+  "dependencies": {
+    "Newtonsoft.Json": "9.0.1",
+    "NLog": "4.3.5",
+    "LanguageExt.Core": "1.7.38"
+  }
+}
