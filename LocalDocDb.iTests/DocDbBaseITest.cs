@@ -4,14 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocalDocDb
+namespace LocalDocDb.iTests
 {
-    public enum FileActionType
+    public class DocDBBaseITest
     {
-        Create,
-        Get,
-        Delete,
-        Replace,
-        Query
     }
 }

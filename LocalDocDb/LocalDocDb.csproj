@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocDbError.cs" />
     <Compile Include="FileActionType.cs" />
     <Compile Include="ApiEmulator.cs" />
     <Compile Include="DiskFiler.cs" />
@@ -85,6 +86,8 @@
     <Compile Include="Response.cs" />
     <Compile Include="Resource.cs" />
     <Compile Include="JsonParser.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Sandbox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />

@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic.FileIO;
+using LanguageExt;
 
-namespace LocalDocDbClient
+namespace LocalDocDb
 {
     public class ApiEmulator
     {
@@ -43,7 +44,7 @@ namespace LocalDocDbClient
             FileSystem.DeleteDirectory(AccountFullPath.FullName, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin); 
         }
         // Multiple Items Operations
-        public Response Submit(HttpOperation operation, string resourcePath)
+        public Response Submit(HttpOperation operation, string resourcePath, string content = EmptyString)
         {
             string resourceType = resourcePath.Split('/').Last();
 
@@ -54,15 +55,29 @@ namespace LocalDocDbClient
                 case HttpOperation.POST:
                     switch (resourceType)
                     {
+                        case "dbs":
+                        case "colls":
+                        case "users":
+                        case "permissions":
+                        case "attachments":
+                        case "sprocs":
+                        case "udfs":
+                        case "triggers":
+                            return new DocDB(AccountFullPath).CreateChild(resourcePath, resourceType, content, content);
                         case "offers":
                         case "docs":
                             return new DocDB(AccountFullPath).QueryChildren(resourcePath, resourceType);
+
                         default:
                             return new Response { Code = 489, Message = "Invalid Resource" };
                     }
                 default:
                     return new Response { Code = 499, Message = "Invalid Operation" };
             }
+        }
+        public TryResult<string> SplitPath(string resourcePath)
+        {
+            return resourcePath.Split('/').Last();
         }
         // Single Item Operations
         public Response Submit(HttpOperation operation, string resourcePath, string targetId, string content = EmptyString)
@@ -88,23 +103,7 @@ namespace LocalDocDbClient
                         default:
                             return new Response { Code = 499, Message = "Invalid Operation" };
                     }
-                case HttpOperation.POST:
-                    switch (resourceType)
-                    {
-                        case "dbs":
-                        case "colls":
-                        case "docs":
-                        case "users":
-                        case "permissions":
-                        case "attachments":
-                        case "offers":
-                        case "sprocs":
-                        case "udfs":
-                        case "triggers":
-                            return new DocDB(AccountFullPath).CreateChild(resourcePath, resourceType, targetId, content, false);
-                        default:
-                            return new Response { Code = 499, Message = "Invalid Operation" };
-                    }
+
                 case HttpOperation.PUT:
                     switch (resourceType)
                     {
@@ -142,5 +141,6 @@ namespace LocalDocDbClient
                     return new Response { Code = 499, Message = "Invalid Operation" };
             }
         }
+
     }
 }

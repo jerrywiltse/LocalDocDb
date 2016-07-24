@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocalDocDbClient.Tests
+namespace LocalDocDbTests
 {
-    class DocDBTest
+    class ApiEmulatorTests
     {
     }
 }

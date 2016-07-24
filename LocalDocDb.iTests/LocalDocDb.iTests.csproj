@@ -4,15 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EF17AD88-C3A9-43B4-AC9D-1ED5DAF9ECE5}</ProjectGuid>
+    <ProjectGuid>{0384BE8B-BF76-4567-A71C-9A2545E293D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LocalDocDb.Tests</RootNamespace>
-    <AssemblyName>LocalDocDb.Tests</AssemblyName>
+    <RootNamespace>LocalDocDb.iTests</RootNamespace>
+    <AssemblyName>LocalDocDb.iTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,21 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiEmulatorTest.cs" />
+    <Compile Include="ApiEmulatorITest.cs" />
+    <Compile Include="DocDbBaseITest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SandboxTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="Properties\project.json" />
+    <None Include="Properties\xunit.runner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="xunit.runner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LocalDocDb\LocalDocDb.csproj">
       <Project>{911b6eeb-6f16-4f61-9432-47dab567e7e8}</Project>
       <Name>LocalDocDb</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="project.json" />
-    <None Include="xunit.runner.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

@@ -1,0 +1,13 @@
+﻿{
+  "runtimes": {
+    "win": { }
+  },
+  "frameworks": {        
+    "net452": { }
+  },
+  "dependencies": {
+    "xunit": "2.1.0",
+    "AutoFixture": "3.49.0",
+    "xunit.runner.visualstudio": "2.1.0"
+  }
+}

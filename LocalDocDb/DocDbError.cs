@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace LocalDocDb
 {
-    public enum FileActionType
+    class DocDbError
     {
-        Create,
-        Get,
-        Delete,
-        Replace,
-        Query
+        public string Message { get;  }
+        public string Code { get;  }
+
     }
 }

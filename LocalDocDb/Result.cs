@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace LocalDocDb
 {
-    public enum FileActionType
+    class Result
     {
-        Create,
-        Get,
-        Delete,
-        Replace,
-        Query
     }
 }
